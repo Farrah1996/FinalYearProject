@@ -1,0 +1,23 @@
+<ion-content padding id="welcome">
+    <img src="assets/imgs/FPI2.png" alt="Gym Logo" width="350" height="300">
+    <h1>Welcome to the Gym</h1>
+    <div>Please Sign in to gain access to gym</div>
+  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+
+        <ion-list>
+          <ion-item id="welcome">
+              <ion-label floating>Email</ion-label>
+            <ion-input  name="email" id="loginField" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  type="text" required [(ngModel)]="memberinfo.email" #email></ion-input>
+          </ion-item>
+          <ion-item id="welcome">
+              <ion-label floating>Password</ion-label>
+            <ion-input name="password" id="passwordField" type="password" required [(ngModel)]="memberinfo.password"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+        <button id="button" ion-button block color="primary"  full type="submit" [disabled]="!loginForm.form.valid">Login</button>
+        <button  ion-button block color="dark"  full type="button" (click)="GotoSignup()">Sign Up</button>
+  </form>
+</ion-content>

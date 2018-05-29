@@ -1,0 +1,45 @@
+
+<ion-header>
+
+  <ion-navbar>
+    Registration
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="welcome">
+
+  <form #loginForm="ngForm" (ngSubmit)="signup();" autocomplete="off">
+        <ion-list>
+          <ion-item id="welcome">
+              <ion-label floating>Email</ion-label>
+            <ion-input name="email" id="loginField" type="text" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required [(ngModel)]="member.email" clearInput="true" ></ion-input>
+          </ion-item>
+          <ion-item id="welcome">
+              <ion-label floating>Password</ion-label>
+            <ion-input name="password" id="passwordField" type="password" required [(ngModel)]="member.password" max="5"></ion-input>
+          </ion-item>
+          <ion-item id="welcome">
+              <ion-label floating>Confirm Password</ion-label>
+            <ion-input name="password2" id="passwordField2" type="password" required [(ngModel)]="member.password2" ></ion-input>
+          </ion-item>
+          <ion-item id="welcome">
+              <ion-label floating>First Name</ion-label>
+            <ion-input name="firstname" id="firstname" type="text" required [(ngModel)]="member.firstname"  clearInput="true"></ion-input>
+          </ion-item>
+          <ion-item id="welcome">
+              <ion-label floating>Last Name</ion-label>
+            <ion-input name="lastname" id="lastname" type="text" required [(ngModel)]="member.lastname"  clearInput="true"></ion-input>
+          </ion-item>
+          <ion-item id="welcome">
+              <ion-label floating>Telelphone</ion-label>
+            <ion-input name="tel" id="tel" type="number" required [(ngModel)]="member.tel"  clearInput="true"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <button ion-button block class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid" (ngSubmit)="addmember();">Sign Up
+        </button>
+  </form>
+</ion-content>

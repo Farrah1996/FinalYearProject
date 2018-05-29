@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "cordova-plugin-ionic-webview": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "cordova-sms-plugin": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.attendance.peter"
+        }
+    }
+}

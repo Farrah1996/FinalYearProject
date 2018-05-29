@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Sign In History</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <div>
+                <p>
+                    {{ member?.firstname }} {{ member?.lastname }}
+                    <span id="memberid">{{ member?.id }}</span>
+                </p>
+                <hr>
+                <p>Register Date :
+                    <span id="signin">{{ member?.add_date }}</span>
+                </p>
+                <p id="email">Email :
+                    <span id="emailaddress">{{ member?.email }}</span>
+                </p>
+                </div>
+                </ion-item>
+
+        <ion-item *ngFor="let signIn of signIns | async">
+            <ion-label>{{signIn.signIn_date}} {{signIn.signIn_time}}</ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+</ion-content>

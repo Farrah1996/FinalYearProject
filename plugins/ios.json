@@ -1,0 +1,48 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-calendar": {
+      "CALENDAR_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-sms-plugin": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.gym.eoin"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.gym.eoin"
+    }
+  }
+}

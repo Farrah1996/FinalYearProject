@@ -1,0 +1,57 @@
+<ion-header>
+        <ion-navbar>
+          <ion-title>
+            Charts
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content padding>
+        <ion-row align-items-end>
+          <ion-col col-2>
+            <button ion-button icon-only outline (click)="details.loss = !details.loss" [color]="details.loss ? 'danger' : 'primary'">
+              <ion-icon name="remove" *ngIf="details.loss"></ion-icon>
+              <ion-icon name="add" *ngIf="!details.loss"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-5>
+            <ion-item>
+              <ion-label floating>Value</ion-label>
+              <ion-input type="number" [(ngModel)]="details.value"></ion-input>
+            </ion-item>
+      
+          </ion-col>
+          <ion-col col-5>
+            <ion-item>
+              <ion-label floating>Category</ion-label>
+              <ion-select [(ngModel)]="details.cat">
+                <ion-option [value]="cat.value" *ngFor="let cat of cats">{{ cat.name }}</ion-option>
+              </ion-select>
+            </ion-item>
+      
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+          <ion-col>
+            <button ion-button full (click)="addmemberdetails()">Add Data</button>
+          </ion-col>
+        </ion-row>
+      
+        <ion-card [hidden]="!chartData">
+          <ion-card-header>
+            Bar Chart Analytics
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #valueBarsCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+        <ion-card [hidden]="!chartData">
+          <ion-card-header>
+            Line Chart Analytics
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #barCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>

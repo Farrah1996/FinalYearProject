@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="welcome">
+    <img src="assets/imgs/FPI2.png" alt="Gym Logo" width="220" height="170" padding-left="200" padding-top="50">
+    <h3 padding-left="200">Welcome to the Gym</h3>
+  <ion-list>
+    <ion-item>
+          <li><b>Name :</b> {{ member?.firstname }} {{ member?.lastname }}</li>
+          <br>
+          <li><b>Email :</b> {{ member?.email }}</li>
+          <br>
+          <li><b>Tel :</b> {{ member?.tel }}</li>
+          <br>
+          <li><b>Member ID :</b> {{ member?.id }}</li>
+          <br>
+          <li><b>Signed Up :</b> {{ member?.add_date }}</li>
+    </ion-item>
+    <ion-item>
+      <button [navPush]="signInHistory" type="button" id="blueButton">Sign In Information</button>
+    </ion-item>
+    <ion-item>
+      <button [navPush]="EditProfile" type="button" id="greyButton">Edit Profile</button>
+    </ion-item>
+    <ion-item>
+      <button (click)="logout()" type="button" id="redButton">Sign Out</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

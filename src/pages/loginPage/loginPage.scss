@@ -1,0 +1,20 @@
+page-loginPage {
+    #welcome {
+        background: color($colors, light);
+        border: none;
+    
+        H1 {
+          font-size: 25px;
+          margin-top: 5px;
+        }
+    
+        #logo {
+          width : 300px;
+          height : 200px;
+        }
+
+        #button{
+            margin-block-end: 2px;
+        }
+      }
+    }
